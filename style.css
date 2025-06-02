@@ -20,3 +20,21 @@ section {
   filter: brightness(90%);
   cursor: pointer;
 }
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-success {
+  transition: background-color 0.3 ease, transform 0.2 ease;
+}
+
+.btn-success:hover {
+  background-color: #0b5ed7;
+  transform: scale(1.03);
+}
