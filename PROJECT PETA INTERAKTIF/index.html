@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- css bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!--css custom-->
+    <link rel="stylesheet" href="style.css" />
+    <!-- css boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!--AOS CSS-->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <title>PETA INTERAKTIF Lokasi | Muhamad Dhaffa</title>
+
+    <!-- leaflet css  -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <!-- inti leaflet js nya buat nampilin peta -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  </head>
+
+  <!--bagian awal peta interaktif-->
+  <body>
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+      <div class="container" data-aos="fade-down" data-aos-duration="850">
+        <a class="navbar-brand fw-bold" href="#">DFRICK</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#mapSection">Peta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Tentang Saya</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#image">Image</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Akhir navba-->
+
+    <!-- Hero Section  -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Hi, I'm Dhaffa</h1>
+        <h3>Peta Interaktif</h3>
+        <p>Ini tempat yang pernah saya kunjungi, dengan menggunakan peta visual dan INTERAKTIF, Menggunakan leaflet js.<br /></p>
+        <div class="btn-box">
+          <a href="https://dfrick05.github.io/DhaffaArdisa.github.oi/">Here Me</a>
+        </div>
+      </div>
+      <div class="hero-sci">
+        <a href="https://www.instagram.com/dhafammm/"><i class="bx bxl-instagram"></i></a>
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bx-server"></i></a>
+      </div>
+    </section>
+    <!-- Akhir -->
+    <!-- img  -->
+    <section id="image">
+      <div class="container">
+        <div class="row text-center mb-5" data-aos="fade-down" data-aos-duration="500">
+          <div class="col">
+            <h2>IMAGE</h2>
+          </div>
+        </div>
+        <div class="row justify-content-evenly g-5">
+          <div class="col-md-4 mb-3">
+            <div class="card" data-aos="flip-left" data-aos-duration="500">
+              <img src="poto/01.jpg" class="card-img-top" alt="poto 1" />
+              <div class="card-body">
+                <p class="card-text text-dark">Curug cipondok ciater</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
+              <img src="poto/02.jpg" class="card-img-top" alt="poto 2" />
+              <div class="card-body">
+                <p class="card-text text-dark">air terjun yang sangat deras dan aman saat situasi hujan</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="400">
+              <img src="poto/04.jpg" class="card-img-top" alt="poto 4" />
+              <div class="card-body">
+                <p class="card-text text-dark">View sekitarnya sangat bagus untuk liburan bersama pasangan atau pun keluarga.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="600">
+              <img src="poto/05.jpg" class="card-img-top" alt="poto 5" />
+              <div class="card-body">
+                <p class="card-text text-dark">View sekitarnya sangat bagus untuk liburan bersama pasangan atau pun keluarga.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container" id="mapSection">
+      <div class="card-map mx-auto mb-5" style="max-width: 2000px">
+        <div class="text-center mb-3" data-aos="fade-right" data-aos-duration="1000">
+          <h3 class="mb-2" style="font-weight: 600">Peta Dunia INTERAKTIF (Leaflet.js)</h3>
+          <div class="text-muted mb-2">Peta dunia | tempat pernah di kunjungi</div>
+        </div>
+        <!-- ini Ukuran maps-->
+        <div id="map"></div>
+        <div class="alert alert-info text-center mt-4 mb-0" id="infoBox" style="display: none"></div>
+      </div>
+    </div>
+    <!--akhir -->
+
+    <!--leaflet js maps-->
+    <script type="text/javascript">
+      const map = L.map('map').setView([-6.953707, 107.611747], 14);
+
+      const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map);
+
+      var curug = [
+        [-6.953707, 107.611747],
+        [-6.738154136481956, 107.66333631327628],
+      ];
+
+      L.polyline(curug, { color: 'red' }).addTo(map);
+
+      <!--menapilkan Marker-->
+      L.marker([-6.953707, 107.611747]).addTo(map).bindPopup('ini jalan rumah saya');
+
+      L.marker([-6.738154136481956, 107.66333631327628]).addTo(map).bindPopup('Curug Pondok Ciater Jl.Kampung Panyuguan No.Desa, Nagrak, Kec. Ciater, Kabupaten Subang, Jawa Barat 41281');
+    </script>
+
+    <!--ini footer bawah-->
+    <div class="footer pb-5">PETA INTERAKTIF | Muhamad Dhaffa | DFRICK05</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: false,
+      });
+    </script>
+  </body>
+</html>
