@@ -78,34 +78,34 @@
         </div>
         <div class="row justify-content-evenly g-5">
           <div class="col-md-4 mb-3">
-            <div class="card" data-aos="flip-left" data-aos-duration="500">
+            <div class="card" id="cipondok" data-aos="flip-left" data-aos-duration="500">
               <img src="poto/01.jpg" class="card-img-top" alt="poto 1" />
               <div class="card-body">
-                <p class="card-text text-dark">Curug cipondok ciater</p>
+                <p class="card-text text-dark">CURUG CIPONDOK CIATER.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
-              <img src="poto/02.jpg" class="card-img-top" alt="poto 2" />
+            <div class="card" id="alunBandung" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
+              <img src="poto/9.jpg" class="card-img-top" alt="poto 2" />
               <div class="card-body">
-                <p class="card-text text-dark">air terjun yang sangat deras dan aman saat situasi hujan</p>
+                <p class="card-text text-dark">ALUN ALUN BANDUNG.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="400">
-              <img src="poto/04.jpg" class="card-img-top" alt="poto 4" />
+            <div class="card" id="candi" data-aos="flip-left" data-aos-duration="500" data-aos-delay="400">
+              <img src="poto/8.jpeg" class="card-img-top" alt="poto 4" />
               <div class="card-body">
-                <p class="card-text text-dark">View sekitarnya sangat bagus untuk liburan bersama pasangan atau pun keluarga.</p>
+                <p class="card-text text-dark">CANDI BOROBUDUR.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="600">
-              <img src="poto/05.jpg" class="card-img-top" alt="poto 5" />
+            <div class="card" id="pangandaran" data-aos="flip-left" data-aos-duration="500" data-aos-delay="600">
+              <img src="poto/10.jpeg" class="card-img-top" alt="poto 5" />
               <div class="card-body">
-                <p class="card-text text-dark">View sekitarnya sangat bagus untuk liburan bersama pasangan atau pun keluarga.</p>
+                <p class="card-text text-dark">PANGANDARAN FENOMENA KAPAL</p>
               </div>
             </div>
           </div>
@@ -134,17 +134,40 @@
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       }).addTo(map);
 
-      var curug = [
-        [-6.953707, 107.611747],
-        [-6.738154136481956, 107.66333631327628],
-      ];
-
-      L.polyline(curug, { color: 'red' }).addTo(map);
-
       <!--menapilkan Marker-->
-      L.marker([-6.953707, 107.611747]).addTo(map).bindPopup('ini jalan rumah saya');
-
-      L.marker([-6.738154136481956, 107.66333631327628]).addTo(map).bindPopup('Curug Pondok Ciater Jl.Kampung Panyuguan No.Desa, Nagrak, Kec. Ciater, Kabupaten Subang, Jawa Barat 41281');
+      L.marker([-6.953707, 107.611747]).addTo(map).bindPopup('rumah saya');
+      L.marker([-6.738154136481956, 107.66333631327628]).addTo(map).bindPopup(`
+      <div style="text-align:center">
+        <a href="#cipondok">
+          <img src="poto/01.jpg" width="120" style="border-radius:6px;"/>
+          </a><br>
+          Curug Pondok Ciater Jl.Kampung Panyuguan No.Desa, Nagrak, Kec. Ciater, Kabupaten Subang, Jawa Barat 41281
+          </div>
+      `);
+      L.marker([-6.9218, 107.6076]).addTo(map).bindPopup(`
+    <div style="text-align:center">
+      <a href="#alunBandung">
+        <img src="poto/9.jpg" width="120" style="border-radius:6px;"  />
+      </a><br>
+      Jl. Asia Afrika, Bandung
+    </div>
+  `);
+      L.marker([-7.607759736743538, 110.20385991027506]).addTo(map).bindPopup(`
+    <div style="text-align:center">
+      <a href="#candi">
+        <img src="poto/8.jpeg" width="120" style="border-radius:6px;"  />
+      </a><br>
+      Jl. Badrawati, Kw. Candi Borobudur, Borobudur, Kec. Borobudur, Kabupaten Magelang, Jawa Tengah
+    </div>
+  `);
+      L.marker([-7.682302561001233, 108.6510947634161]).addTo(map).bindPopup(`
+    <div style="text-align:center">
+      <a href="#pangandaran">
+        <img src="poto/10.jpeg" width="120" style="border-radius:6px;"  />
+      </a><br>
+      Pangandaran, Pananjung, Kec. Pangandaran, Kab. Pangandaran, Jawa Barat
+    </div>
+  `);
     </script>
 
     <!--ini footer bawah-->
